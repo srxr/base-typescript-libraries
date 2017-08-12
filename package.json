@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "base-typescript-sdk",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "node_modules/.bin/webpack --progress --hide-modules",
+    "watch": "node_modules/.bin/webpack --watch --progress --hide-modules",
+    "production": "node_modules/.bin/webpack --optimize-minimize --progress --hide-modules",
+    "build:all": "node_modules/.bin/tsc"
+  },
+  "author": {
+    "name": "leamtrop",
+    "email": "leamtrop@gmail.com"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "ts-promise": "^0.3.4"
+  }
+}
