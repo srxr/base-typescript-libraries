@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base Javascript SDK Example</title>
+  <script src="../dist/Sdk.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  var browser = Sdk.browser;
+  console.log('My Browser is ' + browser.name);
+  console.log('Call Utils Functions: ');
+  var utils = new Sdk.utils({ k: 'v' });
+  utils.init();
+  utils.mainFunction();
+  utils.someFunction();
+  console.table(Sdk);
+</script>
+
+</body>
+</html>
