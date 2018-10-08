@@ -10,7 +10,8 @@ var config = {
 };
 
 module.exports = {
-  // devtool: 'source-map',
+  devtool: 'source-map',
+  mode: process.env.NODE_ENV || 'development', // none, development, production
 
   entry: {
     Sdk: [__dirname + config.path.src + '/index.ts']
@@ -32,22 +33,23 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.ts?$/,
-        loader: 'ts-loader',
-        exclude: [
-          /(node_modules|dist)/
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'ts-loader'
+          }
         ],
-        query: {
-          presets: ['es2015']
-        }
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'dist')
+        ]
       }
     ]
   },
 
-  // uglify your scriptz
+  // uglify your script
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin({ minimize: true })
   ]
 };
