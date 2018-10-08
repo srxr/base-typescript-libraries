@@ -7,7 +7,7 @@ class SomeUtils implements Utils {
   private options: any;
   private params: any;
   foo: string;
-  bar: number;
+  bar!: number;
 
   constructor(options: any = {}) {
     this.foo = options;
