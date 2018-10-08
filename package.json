@@ -1,25 +1,27 @@
 {
   "private": true,
   "name": "base-typescript-sdk",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "node_modules/.bin/webpack --progress --hide-modules",
-    "watch": "node_modules/.bin/webpack --watch --progress --hide-modules",
-    "production": "node_modules/.bin/webpack --optimize-minimize --progress --hide-modules",
-    "build:all": "node_modules/.bin/tsc"
+    "dev": "NODE_ENV=development node_modules/.bin/webpack --progress --hide-modules",
+    "watch": "NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules",
+    "production": "NODE_ENV=production node_modules/.bin/webpack --optimize-minimize --progress --hide-modules",
+    "build:all": "NODE_ENV=development node_modules/.bin/tsc"
   },
   "author": {
     "name": "leamtrop",
     "email": "leamtrop@gmail.com"
   },
   "devDependencies": {
-    "ts-loader": "^2.3.2",
-    "typescript": "^2.4.2",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
-    "ts-promise": "^0.3.4"
+    "ts-promise": "^2.1.0"
   }
 }
