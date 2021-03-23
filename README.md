@@ -3,7 +3,7 @@
 该项目主要用于构建 SDK，采用 `UMD` 风格定义模块，支持快速构建打包模块化 JavaScript 组件/库。
 
 ## 环境
- - Nodejs 
+ - Node.js 
  - TypeScript
 
 ## 初始化
